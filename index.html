@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Pusat Karir - Solusi untuk Pencari Kerja</title>
+    <title>Pusat Karir Indonesia - Solusi Lolos Kerja</title>
     <style>
         * {
             margin: 0;
@@ -13,229 +13,263 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
-            color: #1a2a3a;
-            line-height: 1.6;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #f0f9ff 0%, #e6f0fa 100%);
+            color: #1a2c3e;
+            line-height: 1.5;
             padding: 20px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        /* Header */
+        /* Header - warna segar profesional (gradien biru toska) */
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
+            padding: 1.8rem 1.5rem;
+            border-radius: 28px;
+            margin-bottom: 1.8rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 25px rgba(0,132,180,0.2);
+            transition: all 0.3s;
         }
 
         .header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.9rem;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            opacity: 0.92;
         }
 
-        /* Language Selector */
+        /* Language Selector - lebih rapi */
         .lang-selector {
-            background: white;
-            padding: 0.8rem;
-            border-radius: 50px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 0.6rem 1rem;
+            border-radius: 60px;
             display: inline-flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
 
         .lang-btn {
-            background: #e0e7ff;
+            background: rgba(255,255,255,0.25);
             border: none;
-            padding: 0.4rem 1rem;
-            border-radius: 30px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
             cursor: pointer;
-            font-size: 0.8rem;
-            transition: all 0.3s;
-            font-weight: 500;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: white;
         }
 
         .lang-btn:hover, .lang-btn.active {
-            background: #ff6b35;
-            color: white;
+            background: white;
+            color: #0083b0;
+            transform: scale(0.97);
         }
 
         /* Search Bar */
         .search-section {
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
 
         .search-box {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             background: white;
-            padding: 0.5rem;
-            border-radius: 60px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 0.4rem;
+            border-radius: 56px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+            border: 1px solid #dceaf5;
         }
 
         .search-box input {
             flex: 1;
-            padding: 1rem 1.5rem;
+            padding: 0.7rem 1.2rem;
             border: none;
-            border-radius: 40px;
-            font-size: 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
             outline: none;
+            background: transparent;
         }
 
         .search-box button {
-            background: #ff6b35;
+            background: #00b4db;
             border: none;
-            padding: 0 2rem;
-            border-radius: 40px;
+            padding: 0 1.6rem;
+            border-radius: 50px;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: 0.2s;
         }
 
         .search-box button:hover {
-            background: #e55a2b;
+            background: #0083b0;
         }
 
         /* Categories */
         .categories {
             display: flex;
-            gap: 1rem;
+            gap: 0.7rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
             justify-content: center;
         }
 
         .cat-btn {
             background: white;
-            border: none;
-            padding: 0.6rem 1.2rem;
+            border: 1px solid #cde0ed;
+            padding: 0.4rem 1rem;
             border-radius: 40px;
             cursor: pointer;
+            font-size: 0.8rem;
             font-weight: 500;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
 
         .cat-btn.active, .cat-btn:hover {
-            background: #2a5298;
+            background: #00b4db;
+            border-color: #00b4db;
             color: white;
         }
 
-        /* FAQ Grid */
+        /* FAQ Grid - card lebih kecil & estetik */
         .faq-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
             margin-bottom: 2rem;
         }
 
         .faq-card {
             background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
+            border-radius: 20px;
+            padding: 0.9rem 1rem;
             cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #e2edf5;
         }
 
         .faq-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px rgba(0,132,180,0.08);
+            border-color: #bee0f0;
         }
 
         .faq-question {
             font-weight: 700;
-            font-size: 1.1rem;
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #1a4c6e;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 8px;
         }
 
         .faq-answer {
-            color: #4a5568;
+            color: #2c4b6b;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            font-size: 0.95rem;
-            border-top: 0px solid #e2e8f0;
+            transition: max-height 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            font-size: 0.85rem;
+            line-height: 1.45;
+            border-top: 0px solid #e2edf5;
         }
 
         .faq-card.open .faq-answer {
-            max-height: 500px;
-            margin-top: 1rem;
-            padding-top: 0.75rem;
+            max-height: 400px;
+            margin-top: 0.7rem;
+            padding-top: 0.6rem;
             border-top-width: 1px;
         }
 
         .toggle-icon {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ff6b35;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #00b4db;
+            background: #eef6fc;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
         }
 
-        /* Tips Section */
+        /* Tips section dengan emoji */
         .tips-section {
-            background: #1e3c72;
+            background: linear-gradient(105deg, #1a5f7a 0%, #0c4e6b 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem 0;
+            padding: 1.6rem 1.8rem;
+            border-radius: 28px;
+            margin: 2rem 0 1rem;
         }
 
         .tips-section h3 {
             margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .tips-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.7rem;
             list-style: none;
         }
 
         .tips-list li {
-            background: rgba(255,255,255,0.1);
-            padding: 0.8rem;
-            border-radius: 12px;
-            margin: 0.3rem 0;
+            background: rgba(255,255,255,0.12);
+            padding: 0.6rem 0.8rem;
+            border-radius: 18px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(2px);
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            font-size: 0.85rem;
+            padding: 1.8rem 0.5rem;
+            color: #5d7e9a;
+            font-size: 0.75rem;
+            border-top: 1px solid #cde0ed;
+            margin-top: 1rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 680px) {
             .faq-grid {
                 grid-template-columns: 1fr;
             }
             .search-box {
                 flex-direction: column;
-                border-radius: 20px;
+                border-radius: 32px;
             }
             .search-box button {
-                padding: 0.8rem;
+                padding: 0.6rem;
+            }
+            .header h1 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -243,8 +277,10 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>🚀 Pusat Karir Global</h1>
-        <p>Solusi untuk pencari kerja di seluruh dunia | 30+ Bahasa | GRATIS</p>
+        <h1>
+            <span>🇮🇩</span> Pusat Karir Indonesia <span>✨</span>
+        </h1>
+        <p>💼 Jawaban wawancara • 🌍 8 bahasa • 🎯 Lolos seleksi kerja</p>
         <div class="lang-selector" id="langSelector">
             <button class="lang-btn" data-lang="id">🇮🇩 Indonesia</button>
             <button class="lang-btn" data-lang="en">🇬🇧 English</button>
@@ -259,115 +295,80 @@
 
     <div class="search-section">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Cari pertanyaan... misal: resume, wawancara, LinkedIn">
-            <button id="searchBtn">Cari</button>
+            <input type="text" id="searchInput" placeholder="🔍 Cari pertanyaan... Contoh: ATS, negosiasi gaji, LinkedIn">
+            <button id="searchBtn">Cari ⚡</button>
         </div>
     </div>
 
     <div class="categories" id="categories">
-        <button class="cat-btn active" data-cat="all">Semua</button>
+        <button class="cat-btn active" data-cat="all">📌 Semua</button>
         <button class="cat-btn" data-cat="resume">📄 Resume & ATS</button>
         <button class="cat-btn" data-cat="interview">🎤 Wawancara</button>
-        <button class="cat-btn" data-cat="career">💼 Strategi Karir</button>
-        <button class="cat-btn" data-cat="linkedin">🔗 LinkedIn & Personal Branding</button>
+        <button class="cat-btn" data-cat="career">💡 Strategi Karir</button>
+        <button class="cat-btn" data-cat="linkedin">🔗 LinkedIn & Branding</button>
     </div>
 
     <div class="faq-grid" id="faqGrid"></div>
 
     <div class="tips-section">
-        <h3>✨ Tips Cepat Lolos Rekrutmen ✨</h3>
+        <h3>⭐ 5 Jurus Jitu Lolos Rekrutmen ⭐</h3>
         <ul class="tips-list">
-            <li>📌 Gunakan kata kunci dari deskripsi pekerjaan di resume Anda</li>
-            <li>📌 Format resume: PDF, font standar (Arial/Calibri), hindari kolom dan tabel</li>
-            <li>📌 Cerita dengan metode STAR: Situasi, Tugas, Aksi, Hasil (pakai angka)</li>
-            <li>📌 Kirim lamaran di jam kerja (Senin-Rabu pagi) untuk lebih cepat terbaca</li>
-            <li>📌 Selalu tulis surat lamaran spesifik untuk setiap perusahaan</li>
+            <li>📌 Gunakan kata kunci dari deskripsi pekerjaan di CV</li>
+            <li>📄 Format resume: PDF, font standar (Arial/Calibri) — hindari kolom rumit</li>
+            <li>🎯 Cerita dengan metode STAR: Situasi, Tugas, Aksi, Hasil + angka</li>
+            <li>⏰ Kirim lamaran jam 8-10 pagi (Selasa – Kamis)</li>
+            <li>🤝 Selalu tulis surat lamaran spesifik & follow up setelah 1 minggu</li>
         </ul>
     </div>
 
     <div class="footer">
-        🌍 Akses gratis untuk seluruh pencari kerja | Konten diperbarui rutin | Gunakan Google Translate untuk bahasa lain
+        🌟 Akses gratis untuk seluruh pencari kerja | Dapatkan pekerjaan impianmu 🌟
     </div>
 </div>
 
 <script>
     // Multi-language content
     const translations = {
-        id: {
-            placeholder: "🔍 Cari pertanyaan... misal: resume, wawancara, LinkedIn",
-            tipsTitle: "✨ Tips Cepat Lolos Rekrutmen ✨",
-            footer: "🌍 Akses gratis untuk seluruh pencari kerja | Konten diperbarui rutin | Gunakan Google Translate untuk bahasa lain"
-        },
-        en: {
-            placeholder: "🔍 Search questions... e.g., resume, interview, LinkedIn",
-            tipsTitle: "✨ Quick Tips to Pass Recruitment ✨",
-            footer: "🌍 Free access for all job seekers | Content updated regularly | Use Google Translate for other languages"
-        },
-        es: {
-            placeholder: "🔍 Buscar preguntas... ej: currículum, entrevista, LinkedIn",
-            tipsTitle: "✨ Consejos rápidos para pasar el reclutamiento ✨",
-            footer: "🌍 Acceso gratuito para todos los buscadores de empleo | Contenido actualizado regularmente"
-        },
-        fr: {
-            placeholder: "🔍 Rechercher des questions... ex: CV, entretien, LinkedIn",
-            tipsTitle: "✨ Conseils rapides pour réussir votre recrutement ✨",
-            footer: "🌍 Accès gratuit pour tous les chercheurs d'emploi | Contenu mis à jour régulièrement"
-        },
-        ar: {
-            placeholder: "🔍 ابحث عن أسئلة... مثال: السيرة الذاتية، المقابلة، لينكد إن",
-            tipsTitle: "✨ نصائح سريعة لاجتياز التوظيف ✨",
-            footer: "🌍 وصول مجاني لجميع الباحثين عن عمل | محتوى محدث بانتظام"
-        },
-        zh: {
-            placeholder: "🔍 搜索问题... 例如：简历、面试、领英",
-            tipsTitle: "✨ 快速通过招聘的技巧 ✨",
-            footer: "🌍 所有求职者免费访问 | 内容定期更新"
-        },
-        hi: {
-            placeholder: "🔍 प्रश्न खोजें... जैसे: रिज्यूमे, साक्षात्कार, लिंक्डइन",
-            tipsTitle: "✨ भर्ती पास करने के त्वरित सुझाव ✨",
-            footer: "🌍 सभी नौकरी चाहने वालों के लिए मुफ्त पहुंच | सामग्री नियमित रूप से अपडेट"
-        },
-        pt: {
-            placeholder: "🔍 Buscar perguntas... ex: currículo, entrevista, LinkedIn",
-            tipsTitle: "✨ Dicas rápidas para passar no recrutamento ✨",
-            footer: "🌍 Acesso gratuito para todos os candidatos a emprego | Conteúdo atualizado regularmente"
-        }
+        id: { placeholder: "🔍 Cari pertanyaan... Contoh: ATS, negosiasi gaji, LinkedIn", tipsTitle: "⭐ 5 Jurus Jitu Lolos Rekrutmen ⭐", footer: "🌟 Akses gratis untuk seluruh pencari kerja | Dapatkan pekerjaan impianmu 🌟" },
+        en: { placeholder: "🔍 Search questions... e.g., ATS, salary negotiation, LinkedIn", tipsTitle: "⭐ 5 Powerful Job Search Tips ⭐", footer: "🌟 Free access for all job seekers | Land your dream job 🌟" },
+        es: { placeholder: "🔍 Buscar preguntas... ej: ATS, negociación salarial, LinkedIn", tipsTitle: "⭐ 5 Tips Clave para Ser Contratado ⭐", footer: "🌟 Acceso gratuito para todos | Consigue el trabajo ideal 🌟" },
+        fr: { placeholder: "🔍 Rechercher... ex: ATS, négociation salaire, LinkedIn", tipsTitle: "⭐ 5 Astuces pour Réussir son Recrutement ⭐", footer: "🌟 Accès gratuit | Décrochez l'emploi de vos rêves 🌟" },
+        ar: { placeholder: "🔍 ابحث... مثال: ATS، مفاوضة الراتب، لينكد إن", tipsTitle: "⭐ 5 نصائح ذهبية للتوظيف ⭐", footer: "🌟 وصول مجاني | احصل على وظيفة أحلامك 🌟" },
+        zh: { placeholder: "🔍 搜索问题... 例如：ATS、薪资谈判、领英", tipsTitle: "⭐ 5个求职必胜技巧 ⭐", footer: "🌟 免费访问 | 找到理想工作 🌟" },
+        hi: { placeholder: "🔍 प्रश्न खोजें... जैसे: ATS, वेतन वार्ता, लिंक्डइन", tipsTitle: "⭐ नौकरी पाने के 5 टिप्स ⭐", footer: "🌟 मुफ्त पहुँच | अपनी सपनों की नौकरी पाएं 🌟" },
+        pt: { placeholder: "🔍 Buscar perguntas... ex: ATS, negociação salarial, LinkedIn", tipsTitle: "⭐ 5 Dicas Infalíveis para Contratação ⭐", footer: "🌟 Acesso gratuito | Conquiste o emprego dos sonhos 🌟" }
     };
 
-    // FAQ Data - Total 28 pertanyaan (8 awal + 20 baru)
+    // 28 FAQ data (tetap sama tapi bisa ditambah)
     const faqs = [
-        // Original 8
-        { id: 1, category: "resume", question_id: "Apa itu ATS dan bagaimana cara lolos?", question_en: "What is ATS and how to pass it?", answer_id: "ATS adalah sistem penyaring resume otomatis. Cara lolos: gunakan kata kunci persis dari deskripsi pekerjaan, hindari gambar/tabel, simpan sebagai PDF atau Docx.", answer_en: "ATS is an automated resume screener. To pass: use exact keywords from job description, avoid images/tables, save as PDF or Docx." },
-        { id: 2, category: "resume", question_id: "Contoh bullet point yang kuat untuk pengalaman kerja?", question_en: "Examples of strong bullet points for work experience?", answer_id: "❌ 'Bertanggung jawab untuk media sosial' → ✅ 'Meningkatkan engagement Instagram 40% dalam 3 bulan dengan strategi konten baru.' Gunakan angka dan action verb.", answer_en: "❌ 'Responsible for social media' → ✅ 'Increased Instagram engagement by 40% in 3 months with new content strategy.' Use numbers and action verbs." },
-        { id: 3, category: "interview", question_id: "Cara menjawab 'Ceritakan tentang diri Anda'?", question_en: "How to answer 'Tell me about yourself'?", answer_id: "Rumus: Masa Lalu (pengalaman sebelumnya) + Sekarang (posisi dilamar) + Masa Depan (kontribusi). Durasi 60-90 detik, fokus pada pencapaian.", answer_en: "Formula: Past (previous experience) + Present (position applied) + Future (contribution). Duration 60-90 seconds, focus on achievements." },
-        { id: 4, category: "interview", question_id: "Pertanyaan teknis yang sering muncul untuk IT?", question_en: "Common technical questions for IT jobs?", answer_id: "1. OOP concepts. 2. SQL vs NoSQL. 3. Debug kode. 4. Reverse array. 5. REST API vs GraphQL.", answer_en: "1. OOP concepts. 2. SQL vs NoSQL. 3. Debug code. 4. Reverse array. 5. REST API vs GraphQL." },
-        { id: 5, category: "career", question_id: "Cara nego gaji untuk pemula?", question_en: "How to negotiate salary for beginners?", answer_id: "Riset gaji pasar. Saat ditanya: 'Berdasarkan riset, range Rp X-Y. Saya terbuka diskusi berdasarkan total paket kompensasi.' Jangan sebut angka pertama.", answer_en: "Research market salary. When asked: 'Based on research, range X-Y. I'm open to discussion based on total package.' Don't name first number." },
-        { id: 6, category: "linkedin", question_id: "Optimalisasi profil LinkedIn?", question_en: "Optimize LinkedIn profile?", answer_id: "Headline berisi value, About dengan kata kunci, foto profesional, rekomendasi, aktif posting seminggu sekali.", answer_en: "Headline with value, About with keywords, professional photo, recommendations, active posting once a week." },
-        { id: 7, category: "resume", question_id: "Apakah fresh graduate harus cantumkan IPK?", question_en: "Should fresh graduates include GPA?", answer_id: "Jika IPK >= 3.00 cantumkan. Jika di bawah, tonjolkan proyek, magang, organisasi, dan skill teknis.", answer_en: "If GPA >= 3.00 include it. If below, highlight projects, internships, organizations, technical skills." },
-        { id: 8, category: "career", question_id: "Sumber belajar gratis untuk upskill?", question_en: "Free learning resources for upskilling?", answer_id: "YouTube, Coursera (audit), Google Digital Garage, FreeCodeCamp, Khan Academy. Mulai dari Excel, Canva, atau Google Analytics.", answer_en: "YouTube, Coursera (audit), Google Digital Garage, FreeCodeCamp, Khan Academy. Start with Excel, Canva, or Google Analytics." },
-        
-        // 20 NEW FAQ
-        { id: 9, category: "resume", question_id: "Berapa panjang ideal resume?", question_en: "What is the ideal resume length?", answer_id: "Maximal 2 halaman untuk profesional dengan pengalaman >5 tahun. Fresh graduate cukup 1 halaman. Rekruter hanya menghabiskan 6-7 detik untuk membaca resume.", answer_en: "Maximum 2 pages for professionals with >5 years experience. Fresh graduates: 1 page is enough. Recruiters only spend 6-7 seconds scanning a resume." },
-        { id: 10, category: "resume", question_id: "Font apa yang paling aman untuk ATS?", question_en: "Which font is safest for ATS?", answer_id: "Arial, Calibri, Helvetica, Times New Roman, atau Garamond. Ukuran 10-12pt. Hindari font dekoratif, script, atau custom.", answer_en: "Arial, Calibri, Helvetica, Times New Roman, or Garamond. Size 10-12pt. Avoid decorative, script, or custom fonts." },
-        { id: 11, category: "interview", question_id: "Bagaimana menjawab 'Apa kelemahan terbesar Anda'?", question_en: "How to answer 'What is your biggest weakness'?", answer_id: "Pilih kelemahan nyata tapi bisa diperbaiki. Contoh: 'Saya dulu kesulitan public speaking, tapi saya ikut toastmasters dan sekarang lebih percaya diri.' Jangan bilang 'saya perfeksionis'.", answer_en: "Choose a real but fixable weakness. Example: 'I struggled with public speaking, but I joined toastmasters and now I'm more confident.' Don't say 'I'm a perfectionist'." },
-        { id: 12, category: "interview", question_id: "Cara menjawab 'Kenapa kami harus merekrut Anda'?", question_en: "How to answer 'Why should we hire you'?", answer_id: "Kombinasi: skill yang relevan + pengalaman menyelesaikan masalah serupa + antusiasme. Contoh: 'Dengan pengalaman saya di X dan hasil Y, saya yakin bisa membantu tim mencapai Z.'", answer_en: "Combine: relevant skills + experience solving similar problems + enthusiasm. Example: 'With my experience in X and results Y, I'm confident I can help the team achieve Z.'" },
-        { id: 13, category: "career", question_id: "Apakah boleh melamar banyak posisi di perusahaan yang sama?", question_en: "Can I apply for multiple positions at the same company?", answer_id: "Boleh, maksimal 2-3 posisi yang masih relevan dengan skill Anda. Beri jarak 1-2 minggu antar lamaran. Lebih baik fokus pada satu posisi yang paling cocok.", answer_en: "Yes, maximum 2-3 positions still relevant to your skills. Space applications 1-2 weeks apart. Better to focus on one best-fit position." },
-        { id: 14, category: "career", question_id: "Kapan waktu terbaik mengirim lamaran?", question_en: "When is the best time to send applications?", answer_id: "Selasa sampai Kamis, jam 8-10 pagi waktu setempat. Hindari Jumat sore, akhir pekan, atau hari sebelum liburan panjang.", answer_en: "Tuesday to Thursday, 8-10 AM local time. Avoid Friday afternoon, weekends, or day before long holidays." },
-        { id: 15, category: "linkedin", question_id: "Berapa banyak koneksi LinkedIn yang ideal?", question_en: "What is the ideal number of LinkedIn connections?", answer_id: "Minimal 500+ agar terlihat kredibel. Tapi kualitas lebih penting dari kuantitas. Koneksi dengan orang di industri target Anda lebih berharga.", answer_en: "Minimum 500+ to look credible. But quality over quantity. Connecting with people in your target industry is more valuable." },
-        { id: 16, category: "linkedin", question_id: "Apakah perlu menulis rekomendasi untuk orang lain di LinkedIn?", question_en: "Should I write recommendations for others on LinkedIn?", answer_id: "Sangat disarankan. Semakin banyak Anda memberi rekomendasi, semakin besar kemungkinan orang membalasnya. Rekomendasi 2-3 arah sangat powerful.", answer_en: "Highly recommended. The more recommendations you give, the more likely people will return the favor. 2-3 way recommendations are very powerful." },
-        { id: 17, category: "resume", question_id: "Bolehkah mencantumkan foto di resume untuk ATS?", question_id_en: "Can I include a photo on my resume for ATS?", answer_id: "Tidak disarankan. ATS bisa terganggu dengan gambar. Selain itu di banyak negara (AS, Eropa) foto justru tidak boleh karena menghindari bias. Di Indonesia masih umum tapi tidak wajib.", answer_en: "Not recommended. ATS can be disrupted by images. Also in many countries (US, Europe) photos are not allowed to avoid bias. In Indonesia it's common but not mandatory." },
-        { id: 18, category: "interview", question_id: "Apa yang harus dilakukan jika tidak tahu jawaban saat wawancara?", question_en: "What to do if you don't know the answer during an interview?", answer_id: "Jangan pura-pura tahu. Katakan: 'Saya belum pernah menangani itu secara spesifik, tapi berdasarkan pengalaman saya dengan [hal serupa], saya akan melakukan [pendekatan logis].' Atau tanyakan klarifikasi.", answer_en: "Don't pretend to know. Say: 'I haven't handled that specifically, but based on my experience with [similar thing], I would do [logical approach].' Or ask for clarification." },
-        { id: 19, category: "interview", question_id: "Pertanyaan apa yang bagus ditanyakan ke interviewer?", question_en: "What are good questions to ask the interviewer?", answer_id: "1. 'Apa tantangan terbesar tim ini saat ini?' 2. 'Bagaimana kesuksesan di posisi ini diukur?' 3. 'Bagaimana budaya tim bekerja?' 4. 'Apa yang membuat Anda betah di perusahaan ini?'", answer_en: "1. 'What is the team's biggest challenge right now?' 2. 'How is success measured in this role?' 3. 'What is the team culture like?' 4. 'What makes you stay at this company?'" },
-        { id: 20, category: "career", question_id: "Ap boleh follow up setelah kirim lamaran?", question_en: "Is it okay to follow up after applying?", answer_id: "Boleh. Tunggu 1-2 minggu. Kirim email singkat: 'Saya [nama], melamar posisi [X] pada [tanggal]. Apakah ada update? Terima kasih.' Maksimal 2 kali follow up.", answer_en: "Yes. Wait 1-2 weeks. Send short email: 'I'm [name], applied for [X] on [date]. Any updates? Thank you.' Maximum 2 follow ups." },
-        { id: 21, category: "resume", question_id: "Bagaimana menulis resume jika tidak punya pengalaman kerja?", question_en: "How to write a resume with no work experience?", answer_id: "Fokus pada: proyek kampus, organisasi, volunteer, kursus online, skill teknis (Microsoft Office, Canva, dasar coding). Buat portofolio sederhana. Tulis pencapaian kuantitatif.", answer_en: "Focus on: campus projects, organizations, volunteer work, online courses, technical skills (Microsoft Office, Canva, basic coding). Create a simple portfolio. Write quantitative achievements." },
-        { id: 22, category: "career", question_id: "Cari kerja butuh berapa lama rata-rata?", question_en: "How long does job searching typically take?", answer_id: "Rata-rata 3-6 bulan. Jangan berkecil hati jika ditolak. Setiap 100 lamiran, hanya 2-5 yang panggil interview. Terus tingkatkan resume dan skill sambil menunggu.", answer_en: "Average 3-6 months. Don't get discouraged by rejections. For every 100 applications, only 2-5 get interviews. Keep improving your resume and skills while waiting." },
-        { id: 23, category: "interview", question_id: "Wawancara online via Zoom/Google Meet tipsnya?", question_en: "Tips for online interviews via Zoom/Google Meet?", answer_id: "Test koneksi & audio sebelumnya. Pencahayaan dari depan (bukan dari belakang). Background netral. Pakaian tetap profesional (bisa full atau atasan rapi). Bawa catatan kecil. Lihat ke kamera, bukan ke layar.", answer_en: "Test connection & audio beforehand. Lighting from front (not back). Neutral background. Professional attire (full or neat top). Bring small notes. Look at camera, not screen." },
-        { id: 24, category: "linkedin", question_id: "Harus post apa di LinkedIn sebagai pencari kerja?", question_en: "What should job seekers post on LinkedIn?", answer_id: "1. Cerita sukses kecil (selesai kursus, proyek). 2. Bagikan artikel industri + pendapat Anda. 3. Minta rekomendasi skill. 4. Ucapan terima kasih ke mentor/rekan. Hindari posting keluhan atau terlalu pribadi.", answer_en: "1. Small success stories (completed course, project). 2. Share industry articles + your opinion. 3. Ask for skill endorsements. 4. Thank mentors/colleagues. Avoid complaints or overly personal posts." },
-        { id: 25, category: "resume", question_id: "Perlukah surat lamaran (cover letter) di 2025?", question_en: "Is a cover letter necessary in 2025?", answer_id: "Tidak selalu, tapi sangat membantu jika: 1. Perusahaan kecil/startup. 2. Posisi kreatif. 3. Career shift. 4. Ada gap explanation. Untuk perusahaan besar via ATS, resume lebih penting. Sediakan template siap pakai.", answer_en: "Not always, but very helpful if: 1. Small company/startup. 2. Creative role. 3. Career shift. 4. Gap explanation. For big companies via ATS, resume matters more. Have a template ready." },
-        { id: 26, category: "career", question_id: "Bagaimana menjelaskan gap kerja 1 tahun?", question_en: "How to explain a 1-year employment gap?", answer_id: "Jujur tapi positif. Contoh: 'Saya mengambil waktu untuk kursus [X], merawat keluarga, atau freelancing.' Jangan mengarang. Fokus pada skill baru yang dipelajari selama gap.", answer_en: "Honest but positive. Example: 'I took time for [X] courses, family care, or freelancing.' Don't lie. Focus on new skills learned during the gap." },
-        { id: 27, category: "interview", question_id: "Wawancara grup atau assessment center tipsnya?", question_en: "Group interview or assessment center tips?", answer_id: "Jangan terlalu dominan atau terlalu diam. Tunjukkan: inisiatif (mulai diskusi), kolaborasi ('setuju dengan A, tapi bagaimana kalau ditambah B'), problem solving. Bawa alat tulis. Perhatikan waktu.", answer_en: "Don't be too dominant or too quiet. Show: initiative (start discussion), collaboration ('agree with A, but what if we add B'), problem solving. Bring writing tools. Watch the time." },
-        { id: 28, category: "career", question_id: "Situs apa yang paling efektif cari kerja di Indonesia?", question_en: "Most effective job search sites in Indonesia?", answer_id: "Jobstreet, LinkedIn, Glints (startup/tech), Kalibrr, Indeed. Untuk daerah: Info loker lokal di Facebook Groups atau Telegram. Jangan lupa jaringan (referral) paling ampuh.", answer_en: "Jobstreet, LinkedIn, Glints (startup/tech), Kalibrr, Indeed. For local areas: local job FB Groups or Telegram. Don't forget networking (referrals work best)." }
+        { id: 1, category: "resume", question_id: "📄 Apa itu ATS dan bagaimana cara lolos?", question_en: "📄 What is ATS and how to pass it?", answer_id: "ATS adalah sistem penyaring resume otomatis. Cara lolos: gunakan kata kunci persis dari deskripsi pekerjaan, hindari gambar/tabel, simpan sebagai PDF atau Docx.", answer_en: "ATS is an automated resume screener. To pass: use exact keywords from job description, avoid images/tables, save as PDF or Docx." },
+        { id: 2, category: "resume", question_id: "✍️ Contoh bullet point yang kuat untuk pengalaman kerja?", question_en: "✍️ Examples of strong bullet points for work experience?", answer_id: "❌ 'Bertanggung jawab untuk media sosial' → ✅ 'Meningkatkan engagement Instagram 40% dalam 3 bulan dengan strategi konten baru.' Gunakan angka dan action verb.", answer_en: "❌ 'Responsible for social media' → ✅ 'Increased Instagram engagement by 40% in 3 months with new content strategy.' Use numbers and action verbs." },
+        { id: 3, category: "interview", question_id: "🎤 Cara menjawab 'Ceritakan tentang diri Anda'?", question_en: "🎤 How to answer 'Tell me about yourself'?", answer_id: "Rumus: Masa Lalu (pengalaman sebelumnya) + Sekarang (posisi dilamar) + Masa Depan (kontribusi). Durasi 60-90 detik, fokus pada pencapaian.", answer_en: "Formula: Past (previous experience) + Present (position applied) + Future (contribution). Duration 60-90 seconds, focus on achievements." },
+        { id: 4, category: "interview", question_id: "💻 Pertanyaan teknis yang sering muncul untuk IT?", question_en: "💻 Common technical questions for IT jobs?", answer_id: "1. OOP concepts. 2. SQL vs NoSQL. 3. Debug kode. 4. Reverse array. 5. REST API vs GraphQL.", answer_en: "1. OOP concepts. 2. SQL vs NoSQL. 3. Debug code. 4. Reverse array. 5. REST API vs GraphQL." },
+        { id: 5, category: "career", question_id: "💰 Cara nego gaji untuk pemula?", question_en: "💰 How to negotiate salary for beginners?", answer_id: "Riset gaji pasar. Saat ditanya: 'Berdasarkan riset, range Rp X-Y. Saya terbuka diskusi berdasarkan total paket kompensasi.' Jangan sebut angka pertama.", answer_en: "Research market salary. When asked: 'Based on research, range X-Y. I'm open to discussion based on total package.' Don't name first number." },
+        { id: 6, category: "linkedin", question_id: "🔗 Optimalisasi profil LinkedIn?", question_en: "🔗 Optimize LinkedIn profile?", answer_id: "Headline berisi value, About dengan kata kunci, foto profesional, rekomendasi, aktif posting seminggu sekali.", answer_en: "Headline with value, About with keywords, professional photo, recommendations, active posting once a week." },
+        { id: 7, category: "resume", question_id: "🎓 Apakah fresh graduate harus cantumkan IPK?", question_en: "🎓 Should fresh graduates include GPA?", answer_id: "Jika IPK >= 3.00 cantumkan. Jika di bawah, tonjolkan proyek, magang, organisasi, dan skill teknis.", answer_en: "If GPA >= 3.00 include it. If below, highlight projects, internships, organizations, technical skills." },
+        { id: 8, category: "career", question_id: "📚 Sumber belajar gratis untuk upskill?", question_en: "📚 Free learning resources for upskilling?", answer_id: "YouTube, Coursera (audit), Google Digital Garage, FreeCodeCamp, Khan Academy. Mulai dari Excel, Canva, atau Google Analytics.", answer_en: "YouTube, Coursera (audit), Google Digital Garage, FreeCodeCamp, Khan Academy. Start with Excel, Canva, or Google Analytics." },
+        { id: 9, category: "resume", question_id: "📏 Berapa panjang ideal resume?", question_en: "📏 What is the ideal resume length?", answer_id: "Maximal 2 halaman untuk profesional dengan pengalaman >5 tahun. Fresh graduate cukup 1 halaman. Rekruter hanya menghabiskan 6-7 detik untuk membaca resume.", answer_en: "Maximum 2 pages for professionals with >5 years experience. Fresh graduates: 1 page is enough. Recruiters spend 6-7 seconds scanning a resume." },
+        { id: 10, category: "resume", question_id: "🔤 Font apa yang paling aman untuk ATS?", question_en: "🔤 Which font is safest for ATS?", answer_id: "Arial, Calibri, Helvetica, Times New Roman, atau Garamond. Ukuran 10-12pt. Hindari font dekoratif.", answer_en: "Arial, Calibri, Helvetica, Times New Roman, or Garamond. Size 10-12pt. Avoid decorative fonts." },
+        { id: 11, category: "interview", question_id: "⚡ Bagaimana menjawab 'Apa kelemahan terbesar Anda'?", question_en: "⚡ How to answer 'What is your biggest weakness'?", answer_id: "Pilih kelemahan nyata tapi bisa diperbaiki. Contoh: 'Saya dulu kesulitan public speaking, tapi saya ikut toastmasters.' Jangan bilang 'saya perfeksionis'.", answer_en: "Choose a real but fixable weakness. Example: 'I struggled with public speaking, but I joined toastmasters.' Don't say 'perfectionist'." },
+        { id: 12, category: "interview", question_id: "🏆 Kenapa kami harus merekrut Anda?", question_en: "🏆 Why should we hire you?", answer_id: "Kombinasi skill relevan + pengalaman + antusiasme. Contoh: 'Dengan pengalaman saya di X dan hasil Y, saya yakin bisa membantu tim mencapai Z.'", answer_en: "Combine relevant skills + experience + enthusiasm. Example: 'With my experience in X and results Y, I can help the team achieve Z.'" },
+        { id: 13, category: "career", question_id: "📬 Apakah boleh follow up setelah kirim lamaran?", question_en: "📬 Is it okay to follow up after applying?", answer_id: "Tunggu 1-2 minggu. Kirim email singkat: 'Saya [nama], melamar posisi [X]. Apakah ada update?' Maksimal 2 kali follow up.", answer_en: "Wait 1-2 weeks. Send short email. Maximum 2 follow ups." },
+        { id: 14, category: "career", question_id: "⏳ Berapa lama cari kerja rata-rata?", question_en: "⏳ How long does job searching take?", answer_id: "Rata-rata 3-6 bulan. Jangan berkecil hati. Setiap 100 lamaran, 2-5 yang panggil interview. Terus tingkatkan skill.", answer_en: "Average 3-6 months. Don't get discouraged. For every 100 apps, 2-5 get interviews. Keep improving." },
+        { id: 15, category: "linkedin", question_id: "👥 Berapa banyak koneksi LinkedIn yang ideal?", question_en: "👥 Ideal LinkedIn connections?", answer_id: "Minimal 500+. Tapi kualitas > kuantitas. Koneksi dengan orang di industri target lebih berharga.", answer_en: "Minimum 500+. Quality over quantity. Connect with target industry people." },
+        { id: 16, category: "linkedin", question_id: "✍️ Apakah perlu menulis rekomendasi untuk orang lain?", question_en: "✍️ Should I write recommendations for others?", answer_id: "Sangat disarankan. Semakin banyak memberi rekomendasi, semakin besar kemungkinan dibalas. Rekomendasi 2-3 arah powerful.", answer_en: "Highly recommended. The more you give, the more likely to get back. 2-3 way recommendations are powerful." },
+        { id: 17, category: "resume", question_id: "📸 Bolehkah mencantumkan foto di resume untuk ATS?", question_en: "📸 Photo on resume for ATS?", answer_id: "Tidak disarankan. ATS bisa terganggu. Di luar negeri malah dilarang. Di Indonesia masih umum tapi tidak wajib.", answer_en: "Not recommended. ATS can be disrupted. Abroad it's banned. In Indonesia common but not mandatory." },
+        { id: 18, category: "interview", question_id: "🤔 Tidak tahu jawaban saat wawancara, gimana?", question_en: "🤔 Don't know answer during interview?", answer_id: "Jangan pura-pura. Katakan: 'Saya belum pernah menangani itu, tapi berdasarkan pengalaman saya dengan [hal serupa], saya akan melakukan [pendekatan logis].'", answer_en: "Don't pretend. Say: 'I haven't handled that, but based on experience with similar, I would do logical approach.'" },
+        { id: 19, category: "interview", question_id: "❓ Pertanyaan bagus untuk ditanyakan ke interviewer?", question_en: "❓ Good questions to ask interviewer?", answer_id: "1. 'Apa tantangan terbesar tim ini?' 2. 'Bagaimana kesuksesan diukur?' 3. 'Apa yang membuat Anda betah di sini?'", answer_en: "1. 'Biggest team challenge?' 2. 'How is success measured?' 3. 'What makes you stay here?'" },
+        { id: 20, category: "career", question_id: "🌐 Situs paling efektif cari kerja di Indonesia?", question_en: "🌐 Most effective job sites in Indonesia?", answer_id: "Jobstreet, LinkedIn, Glints, Kalibrr, Indeed. Juga grup Facebook loker dan referral (jaringan) paling ampuh.", answer_en: "Jobstreet, LinkedIn, Glints, Kalibrr, Indeed. Also local FB groups and referral networks work best." },
+        { id: 21, category: "resume", question_id: "📝 Resume tanpa pengalaman kerja?", question_en: "📝 Resume with no work experience?", answer_id: "Fokus pada proyek kampus, organisasi, volunteer, kursus online, skill teknis. Buat portofolio sederhana.", answer_en: "Focus on campus projects, organizations, volunteer, online courses, technical skills. Create simple portfolio." },
+        { id: 22, category: "career", question_id: "🕒 Bagaimana menjelaskan gap kerja 1 tahun?", question_en: "🕒 Explain 1-year employment gap?", answer_id: "Jujur tapi positif: 'Saya mengambil waktu untuk kursus/merawat keluarga/freelancing.' Fokus pada skill baru.", answer_en: "Honest but positive: 'I took time for courses/family care/freelancing.' Focus on new skills." },
+        { id: 23, category: "interview", question_id: "💻 Tips wawancara online (Zoom/Meet)?", question_en: "💻 Online interview tips (Zoom/Meet)?", answer_id: "Test koneksi, pencahayaan depan, background netral, pakaian rapi, lihat kamera, siapkan catatan kecil.", answer_en: "Test connection, front lighting, neutral background, professional attire, look at camera, small notes." },
+        { id: 24, category: "linkedin", question_id: "📢 Posting apa di LinkedIn sebagai pencari kerja?", question_en: "📢 What to post on LinkedIn as a job seeker?", answer_id: "Cerita sukses kecil, bagikan artikel + opini, minta rekomendasi skill, ucapkan terima kasih. Hindari keluhan.", answer_en: "Small success stories, share articles + opinion, ask endorsements, thank others. Avoid complaints." },
+        { id: 25, category: "resume", question_id: "✉️ Perlukah surat lamaran (cover letter) di 2025?", question_en: "✉️ Cover letter necessary in 2025?", answer_id: "Tidak selalu, tapi membantu untuk startup, career shift, atau jelaskan gap. Sediakan template.", answer_en: "Not always, but helpful for startups, career shift, or explaining gaps. Have a template ready." },
+        { id: 26, category: "career", question_id: "🤝 Gimana cara dapat referral kerja?", question_en: "🤝 How to get a job referral?", answer_id: "Bangun koneksi tulus, tanya alumni/teman, ikut komunitas profesional, tawarkan value dulu sebelum minta tolong.", answer_en: "Build genuine connections, ask alumni/friends, join professional communities, offer value first." },
+        { id: 27, category: "interview", question_id: "👥 Wawancara grup/assessment center tips?", question_en: "👥 Group interview/assessment center tips?", answer_id: "Jangan dominan atau diam. Tunjukkan inisiatif, kolaborasi, problem solving. Bawa alat tulis.", answer_en: "Don't be too dominant or quiet. Show initiative, collaboration, problem solving. Bring pen and paper." },
+        { id: 28, category: "career", question_id: "🎯 Gimana caranya pilih karir yang cocok?", question_en: "🎯 How to choose a suitable career?", answer_id: "Kenali minat, strength, value. Coba tes minat bakat online, lakukan magang singkat, atau shadowing profesional.", answer_en: "Know your interests, strengths, values. Try interest tests, short internships, or job shadowing." }
     ];
 
     let currentLang = 'id';
@@ -405,7 +406,7 @@
 
         document.querySelectorAll('.faq-card').forEach(card => {
             card.addEventListener('click', function(e) {
-                if(e.target.classList.contains('toggle-icon') || e.target.classList.contains('faq-question') || e.target === this) {
+                if(e.target.classList.contains('toggle-icon') || e.target.closest('.faq-question') || e.target === this) {
                     this.classList.toggle('open');
                     const icon = this.querySelector('.toggle-icon');
                     icon.textContent = this.classList.contains('open') ? '−' : '+';
@@ -416,7 +417,7 @@
 
     function updateLanguage() {
         document.getElementById('searchInput').placeholder = translations[currentLang]?.placeholder || translations.id.placeholder;
-        document.querySelector('.tips-section h3').innerText = translations[currentLang]?.tipsTitle || translations.id.tipsTitle;
+        document.querySelector('.tips-section h3').innerHTML = translations[currentLang]?.tipsTitle || translations.id.tipsTitle;
         document.querySelector('.footer').innerHTML = translations[currentLang]?.footer || translations.id.footer;
         renderFaqs();
     }
@@ -450,7 +451,6 @@
         }
     });
 
-    // Set default active language
     document.querySelector('.lang-btn[data-lang="id"]').classList.add('active');
     renderFaqs();
 </script>
